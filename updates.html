@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Updates | Insight'25</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons --> 
+  <link href="./assets/insight_favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="main">
+<!-- 
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div> -->
+  
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left" style="display: flex; flex-direction:row; gap: 10px; align-items: baseline; justify-content: center;">
+        <a href="#intro" class="scrollto"><img src="./assets/insight_logo.png" title="hello"></a>
+        <p style="font-family: neon-ai; color: #f2f2f2; font-size: 20px;">INSIGHT'25</p>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html#intro">Home</a></li>
+          <li><a href="winners.html">Winners</a></li> 
+          <li><a href="scoreboard.html">Scoreboard</a></li>
+          <li><a href="javascript:history.go(-1)"><i class="fa fa-arrow-left"></i> back</a></li>  
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <main id="main" class="main-page event-page">
+
+    <!--==========================
+      Updates Section
+    ============================-->
+    <section id="events-details" class="wow fadeIn">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>INSIGHT'25 | Updates</h2>
+          <p class="no-bg">All updates & annoucements regarding Insight'25 will be posted here.</p>
+        </div>
+
+
+        <div id="updates" style="overflow-y: auto; height: 75vh;">
+          
+        </div>
+        
+      </div>
+
+    </section>
+
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="position: static; bottom: 0; width: 100vw">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Insight25</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">Insight25 Tech Committee</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <video autoplay muted loop id="bg_video" poster="./assets/bg_poster.png">
+    <source src="./assets/site_bg.mp4" type="video/mp4">
+  </video>
+
+  <script>
+    // URL of the Django API endpoint
+    const updatesUrl = 'http://localhost:8000/updates/';  
+    
+    // Use fetch to get the data
+    fetch(updatesUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            console.log(response)
+            return response.json();
+        })
+        .then(data => {
+            console.log(data)
+                const updatesSection = document.getElementById('updates');
+
+                if (data && data.length > 0) {
+                    // Loop through all items
+                    data.forEach(update => {
+                        console.log(update.update_text)
+                        console.log(update.update_time)
+                        updatesSection.innerHTML += `
+                          <div class="list-group-item" style="background-color: rgba(2, 17, 11, 0.9); text-align: justify; color: #fefefe; border-bottom: 1px solid darkgrey">
+                            <p class="mb-2">${update.update_text}</p>
+                            <small class="text-muted">Updated on: ${update.update_time}</small>
+                          </div>
+                          `;
+                    });
+                } else {
+                    updatesSection.innerHTML += `
+                        <div class="list-group-item" style="background: #1b1b1b; color: #fefefe; border-bottom: 1px solid darkgrey">
+                            <p>No updates available at the moment.</p>
+                        </div>
+                    `;
+                }
+            })
+        .catch(error => {
+            console.error('There was an error fetching the data:', error);
+        });
+  </script>  
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

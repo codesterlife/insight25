@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Winners | Insight'25</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons --> 
+  <link href="./assets/insight_favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="main">
+
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+  
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left" style="display: flex; flex-direction:row; gap: 10px; align-items: baseline; justify-content: center;">
+        <a href="#intro" class="scrollto"><img src="./assets/insight_logo.png" title="hello"></a>
+        <p style="font-family: neon-ai; color: #f2f2f2; font-size: 20px;">INSIGHT'25</p>
+      </div>  
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html#intro">Home</a></li>
+          <li><a href="scoreboard.html">Scoreboard</a></li>
+          <li><a href="javascript:history.go(-1)"><i class="fa fa-arrow-left"></i> back</a></li>  
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <main id="main" class="main-page event-page">
+
+    <!--==========================
+      Updates Section
+    ============================-->
+    <section id="events-details" class="wow fadeIn">
+
+      <div class="container">
+        
+        <div class="section-header">
+          <h2>INSIGHT'25 | Event Winners</h2>
+          <p class="no-bg">Here are the winners of each event at Insight'25</p>
+        </div>
+
+        <table class="table table-bordered table-responsive-sm" id="winners" style="background-color: rgba(2, 17, 11, 0.9); color: #fefefe; text-align: center;">
+
+          <thead>
+            <tr>  
+              <th scope="col">#</th>
+              <th scope="col">Event</th>
+              <th scope="col">Name</th>
+              <th scope="col">College</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="position: fixed; bottom: 0; width: 100vw;">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Insight25</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">Insight25 Tech Committee</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <video autoplay muted loop id="bg_video" poster="./assets/bg_poster.png">
+    <source src="./assets/site_bg.mp4" type="video/mp4">
+  </video>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script>
+    // URL of the Django API endpoint
+    const winnersUrl = 'http://localhost:8000/winners/';
+
+    // Use fetch to get the data
+    fetch(winnersUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            console.log(response)
+            return response.json();
+        })
+        .then(data => {
+            console.log(data)
+            // Display the response in the HTML
+                const winners =  document.querySelector('#winners tbody');
+                if (data && data.length > 0) {
+                  // Loop through all items and append their images
+                  for (let i = 0; i < data.length; i++) {
+                  winners.innerHTML += `
+                    <tr>
+                      <th scope="row">${i + 1}</th>
+                      <td>${data[i].event_name}</td>
+                      <td>${data[i].team_name}</td>
+                      <td>${data[i].team_college}</td>
+                    </tr>
+                  `;
+                }
+              } else {
+                  winners.innerHTML += `
+                    <tr>
+                      <th cope="row"></th>
+                      <td></td>
+                      <td>There is no data available at the moment.</td>
+                      <td></td>
+                    </tr>
+                  `;
+                }
+            })
+        .catch(error => {
+            console.error('There was an error fetching the data:', error);
+        });
+  </script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
