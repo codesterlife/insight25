@@ -1465,11 +1465,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   } */
 
   #intro .intro-wrapper {
-    height: 100rem;
     flex-direction: column;
     gap: 3.125rem;
-    margin-top: -20rem;
-    margin-bottom: 20rem;
+    /* margin-bottom: 20rem; */
   }
 
   #intro .logo-container img {
@@ -1493,6 +1491,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-wrapper .timer-wrapper {
     flex: 0 1 auto;
+    margin-top: 50rem;
   }
 
   #about h3 {
