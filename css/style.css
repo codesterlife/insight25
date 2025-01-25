@@ -624,6 +624,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .timer-wrapper {
   display: flex;
+  background-color: rgba(2, 13, 7, 0.8);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -634,7 +635,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .timer {
   text-align: center;
-  background: rgba(2, 13, 7, 0.8);
   padding: 0.9375rem;
   border-radius: 0.9375rem;
   max-width: 25rem;
@@ -1492,8 +1492,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-wrapper .timer-wrapper {
     flex: 0 1 auto;
-    margin-top: 2.5rem;
+    margin-top: 15rem;
   }
+
+  /* #about {
+  } */
 
   #about h3 {
     font-size: 1rem;
