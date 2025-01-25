@@ -1461,7 +1461,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     flex-direction: column;
     gap: 3.125rem;
     margin-top: -2rem;
-    padding-bottom: 150rem;
   }
 
   #intro .logo-container img {
@@ -1485,6 +1484,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   .timer-wrapper {
     flex: 0 1 auto;
+  }
+
+  #about {
+    margin-top: 15rem;
   }
 
   #about h3 {
