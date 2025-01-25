@@ -523,9 +523,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100vw;
-  background-color: rgba(2, 13, 7, 0.8);
+  /* background-color: rgba(2, 13, 7, 0.8); */
   padding: 0;
   margin: 0;
+  z-index: 99;
 }
 
 #intro .intro-wrapper {
@@ -538,6 +539,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   align-items: center;
   justify-content: center;
   padding-top: 7rem;
+  z-index: 99;
+  background-color: rgba(2, 13, 7, 0.8);
 }
 
 #bg_video {
@@ -626,6 +629,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-direction: column;
   width: 100%;
   margin: 3.75rem auto;
+  z-index: 99;
 }
 
 .timer {
@@ -1487,9 +1491,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 15rem;
   }
 
-  /* #about {
-
-  } */
+  #about {
+    /* position: static; */
+  }
 
   #about h3 {
     font-size: 1rem;
