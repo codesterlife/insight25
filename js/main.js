@@ -133,12 +133,40 @@ jQuery(document).ready(function( $ ) {
     responsive: { 0: { items: 1 }, 768: { items: 3 }, 992: { items: 4 }, 1200: {items: 5}
     }
   });
-
-// custom code
-const preloader = document.querySelector('.loader-container');
-
-window.addEventListener("load", function(){
-  preloader.style.display = "none"; 
-})
-
 }); 
+
+  // custom code
+  const preloader = document.querySelector('.loader-container');
+
+  window.addEventListener("load", function(){
+    preloader.style.display = "none"; 
+  })
+
+  // Countdown timer JS
+  const targetDate = new Date('2025-01-25T16:04:00');
+  const endDate = new Date('2025-01-25T16:05:00');
+  
+  function updateCountdown() {
+    const now = new Date();
+    const difference = targetDate - now;
+    const endDifference = endDate - now;
+
+    if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    } else if (endDifference > 0) {
+        document.getElementById('timer').innerHTML = `<div class='live-message'>INSIGHT'25 is now <span class="msg-highlight">LIVE!</span></div>`;
+    } else {
+        document.getElementById('timer').innerHTML = `<div class='heading' style="text-align: center; font-weight: bold;">INSIGHT'25 has Ended.</div>`
+        document.getElementById('timer').innerHTML += `<div class='description'> We express our heartfelt gratitude to all who made this event a great success! We'll be back for INSIGHT'26.</div>`;
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
