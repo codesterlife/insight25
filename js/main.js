@@ -143,8 +143,8 @@ jQuery(document).ready(function( $ ) {
   })
 
   // Countdown timer JS
-  const targetDate = new Date('2025-01-25T16:04:00');
-  const endDate = new Date('2025-01-25T16:05:00');
+  const targetDate = new Date('2025-02-18T00:00:00');
+  const endDate = new Date('2025-02-20T00:00:00');
   
   function updateCountdown() {
     const now = new Date();
