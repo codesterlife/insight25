@@ -1461,7 +1461,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     flex-direction: column;
     gap: 3.125rem;
     margin-top: -2rem;
-    padding-bottom: 15rem;
+    padding-bottom: 150rem;
   }
 
   #intro .logo-container img {
