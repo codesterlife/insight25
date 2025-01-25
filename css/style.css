@@ -1461,10 +1461,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: inline;
   }
 
+  /* #intro {
+  } */
+
   #intro .intro-wrapper {
     flex-direction: column;
     gap: 3.125rem;
     margin-top: -2rem;
+    height: 100%;
   }
 
   #intro .logo-container img {
@@ -1488,11 +1492,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-wrapper .timer-wrapper {
     flex: 0 1 auto;
-    margin-top: 15rem;
-  }
-
-  #about {
-    /* position: static; */
+    margin-top: 2.5rem;
   }
 
   #about h3 {
