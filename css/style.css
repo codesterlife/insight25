@@ -1491,7 +1491,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-wrapper .timer-wrapper {
     flex: 0 1 auto;
-    margin-top: 50rem;
+    /* margin-top: 50rem; */
   }
 
   #about {
