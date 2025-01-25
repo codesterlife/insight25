@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background-color: #000;
   overflow: hidden;
-  z-index: 99;
+  z-index: 9999;
   position: fixed;
 }
 
@@ -236,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 4.375rem;
   padding: 0.9375rem 0;
   transition: all 0.5s;
+  z-index: 999;
 }
 
 #header #logo h1 {
@@ -522,24 +523,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro {
   width: 100vw;
-  background: rgba(2, 13, 7, 0.8);
-  margin: 0 auto;
-  padding: 0 auto;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+  background-color: rgba(2, 13, 7, 0.8);
+  padding: 0;
+  margin: 0;
 }
 
 #intro .intro-wrapper {
   width: 100vw;
-  height: 100vh;
   z-index: 99;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center; 
-  margin-top: 5.625rem; 
+  justify-content: center;
+  padding-top: 7rem;
+ 
 }
 
 #bg_video {
@@ -568,7 +567,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-direction: column;
   text-align: center;
   z-index: 99 ;
-  margin: 0 0 0 6.25rem;
+  padding: 0 0 0 6.25rem;
 }
 
 #intro h1 {
@@ -627,7 +626,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 3.75rem;
+  margin: 3.75rem auto;
 }
 
 .timer {
@@ -731,7 +730,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-position: center center;
   overflow: hidden;
   position: relative;
-  height: 50vh;
   padding: 3.75rem 0 2.5rem 0;
   color: #fefefe;
 }
@@ -749,12 +747,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about h2 {
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: 200;
   margin-bottom: 0.625rem;
   color: #40bf73;
   text-align: center;
   font-family: neon-ai, sans-serif;
-  letter-spacing: 0.3125rem;
+  /* letter-spacing: 0.3125rem; */
 }
 
 #about h3 {
@@ -1463,6 +1461,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   #intro .intro-wrapper {
     flex-direction: column;
     gap: 3.125rem;
+    margin-top: -2rem;
   }
 
   #intro .logo-container img {
@@ -1472,7 +1471,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #intro .intro-container {
-    margin: 0;
+    margin-top: 0;
+    padding: 0;
   }
 
   #intro h1 {
@@ -1487,17 +1487,22 @@ body.mobile-nav-active #mobile-nav-toggle {
     flex: 0 1 auto;
   }
 
+  #about h3 {
+    font-size: 1rem;
+  }
+
   #about p {
-    width: 95vw;
-    text-align: center;
+    width: 92vw;
+    text-align: justify;
+    font-size: 0.7rem;
   }
 
   #events .event .details {
-    bottom: -60%;
+    bottom: -50%;
   }
 
   #events .event .details a {
-    margin: 0px auto;
+    margin: 0 auto;
   }
 
   #schedule .nav-tabs a {
