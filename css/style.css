@@ -1,3 +1,5 @@
+/* Updated CSS with responsive units */
+
 /*color palette ["#40bf73", "#272737", "#fefefe"] */
 
 /* Custom font imports */
@@ -27,30 +29,25 @@
 }
 
 /* custom scrollbar css */
-*::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+*::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 0.375rem rgba(0,0,0,0.6);
 	background-color: rgba(2, 13, 7, 0.8);
 }
 
-*::-webkit-scrollbar
-{
-	width: 10px;
+*::-webkit-scrollbar {
+	width: 0.625rem;
 	background-color: rgba(2, 13, 7, 0.8);
 }
 
-*::-webkit-scrollbar-thumb
-{
+*::-webkit-scrollbar-thumb {
 	background-image: -webkit-linear-gradient(90deg,
 	                                          rgb(77, 174, 124) 0%,
                                             rgb(77, 174, 124) 25%,
-											                      transparent 100%,
-											                    rgba(0, 1, 0, 1) 75%,
-											                      transparent);
-
-  border-radius: 5px;
+								                      transparent 100%,
+								                    rgba(0, 1, 0, 1) 75%,
+								                      transparent);
+  border-radius: 0.3125rem;
 }
-
 
 body {
   background: #fefefe;
@@ -74,20 +71,20 @@ a:focus {
 
 p {
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.875rem 0;
   font-family: rubik, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: raleway, sans-serif;
   font-weight: 200;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25rem 0;
   padding: 0;
   color: #40bf73;
 }
 
 .main-page {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .event-page:before {
@@ -118,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .loader {
   width: fit-content;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: raleway;
   line-height: 1.4;
   font-weight: 700;
@@ -149,13 +146,13 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 22px;
-  height: 60px;
+  width: 1.375rem;
+  height: 3.75rem;
   background: 
-   linear-gradient(90deg,#1b1b1b 4px,#0000 0 calc(100% - 4px),#1b1b1b 0) bottom /22px 20px,
-   linear-gradient(90deg,#40bf73  4px,#0000 0 calc(100% - 4px),#40bf73  0) bottom 10px left 0/22px 6px,
-   linear-gradient(#40bf73 0 0) bottom 3px left 0  /22px 8px,
-   linear-gradient(#40bf73 0 0) bottom 0   left 50%/8px  16px;
+   linear-gradient(90deg,#1b1b1b 0.25rem,#0000 0 calc(100% - 0.25rem),#1b1b1b 0) bottom /1.375rem 1.25rem,
+   linear-gradient(90deg,#40bf73  0.25rem,#0000 0 calc(100% - 0.25rem),#40bf73  0) bottom 0.625rem left 0/1.375rem 0.375rem,
+   linear-gradient(#40bf73 0 0) bottom 0.1875rem left 0  /1.375rem 0.5rem,
+   linear-gradient(#40bf73 0 0) bottom 0   left 50%/0.5rem  1rem;
  background-repeat: no-repeat;
  animation: l9-1 2s infinite;
  z-index: 9999;
@@ -167,46 +164,45 @@ h1, h2, h3, h4, h5, h6 {
   75.1%,100%{background-size: 0 0,0 0}
 }
 @keyframes l9-1{
-  25%   { background-position:bottom, bottom 54px left 0,bottom 3px left 0,bottom 0 left 50%;left:0}
-  25.1% { background-position:bottom, bottom 10px left 0,bottom 3px left 0,bottom 0 left 50%;left:0}
-  50%   { background-position:bottom, bottom 10px left 0,bottom 3px left 0,bottom 0 left 50%;left:calc(100% - 22px)}
-  75%   { background-position:bottom, bottom 54px left 0,bottom 3px left 0,bottom 0 left 50%;left:calc(100% - 22px)}
-  75.1% { background-position:bottom, bottom 10px left 0,bottom 3px left 0,bottom 0 left 50%;left:calc(100% - 22px)}
+  25%   { background-position:bottom, bottom 3.375rem left 0,bottom 0.1875rem left 0,bottom 0 left 50%;left:0}
+  25.1% { background-position:bottom, bottom 0.625rem left 0,bottom 0.1875rem left 0,bottom 0 left 50%;left:0}
+  50%   { background-position:bottom, bottom 0.625rem left 0,bottom 0.1875rem left 0,bottom 0 left 50%;left:calc(100% - 1.375rem)}
+  75%   { background-position:bottom, bottom 3.375rem left 0,bottom 0.1875rem left 0,bottom 0 left 50%;left:calc(100% - 1.375rem)}
+  75.1% { background-position:bottom, bottom 0.625rem left 0,bottom 0.1875rem left 0,bottom 0 left 50%;left:calc(100% - 1.375rem)}
 }
 
-/* Sections Header
---------------------------------*/
+/* Sections Header */
 
 .section-header {
-  margin-bottom:  20px;
+  margin-bottom:  1.25rem;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .section-header::before {
   content: '';
   position: absolute;
   display: block;
-  width: 60px;
-  height: 5px;
+  width: 3.75rem;
+  height: 0.3125rem;
   background: #40bf73;
   bottom: 0;
-  left: calc(50% - 25px);
+  left: calc(50% - 1.5625rem);
 }
 
 .section-header h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .section-header p {
   text-align: center;
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #1b1b1b;
 }
@@ -224,8 +220,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #header {
-  height: 90px;
-  padding: 25px 0;
+  height: 5.625rem;
+  padding: 1.5625rem 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -237,19 +233,19 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled,
 #header.header-fixed {
   background-color: #1b1b1b;
-  height: 70px;
-  padding: 15px 0;
+  height: 4.375rem;
+  padding: 0.9375rem 0;
   transition: all 0.5s;
 }
 
 #header #logo h1 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin: 0;
-  padding: 6px 0;
+  padding: 0.375rem 0;
   line-height: 1;
   font-family: neon-ai, sans-serif;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875rem;
   text-transform: uppercase;
 }
 
@@ -265,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 2.5rem;
 }
 
 /*--------------------------------------------------------------
@@ -309,19 +305,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li {
-  min-width: 180px;
+  min-width: 11.25rem;
 }
 
 /* Nav Menu Arrows */
 
 .sf-arrows .sf-with-ul {
-  padding-right: 30px;
+  padding-right: 1.875rem;
 }
 
 .sf-arrows .sf-with-ul:after {
   content: "\f107";
   position: absolute;
-  right: 15px;
+  right: 0.9375rem;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -331,23 +327,23 @@ h1, h2, h3, h4, h5, h6 {
   content: "\f105";
 }
 
-/* Nav Meu Container */
+/* Nav Menu Container */
 
 #nav-menu-container {
   float: right;
   margin: 0;
 }
 
-/* Nav Meu Styling */
+/* Nav Menu Styling */
 
 .nav-menu a, #intro a {
-  padding: 8px;
+  padding: 0.5rem;
   text-decoration: none;
   display: inline-block;
   color: rgba(202, 206, 221, 0.8);
   font-family: raleway, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
   outline: none;
 }
 
@@ -357,14 +353,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu > li {
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .nav-menu > li > a:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 0.125rem;
   bottom: 0;
   left: 0;
   background-color: #40bf73;
@@ -380,11 +376,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul {
-  margin: 4px 0 0 0;
-  padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  margin: 0.25rem 0 0 0;
+  padding: 0.625rem;
+  box-shadow: 0px 0px 1.875rem rgba(127, 137, 161, 0.25);
   background: #fefefe;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
 }
 
 .nav-menu ul li {
@@ -392,13 +388,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li a {
-  padding: 10px;
+  padding: 0.625rem;
   color: #1d1d1d;
   transition: 0.3s;
   display: block;
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: none;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
 }
 
 .nav-menu ul li:hover > a {
@@ -417,10 +413,10 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   top: 0;
   z-index: 999;
-  margin: 15px 15px 0 0;
+  margin: 0.9375rem 0.9375rem 0 0;
   border: 0;
   background: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   display: none;
   transition: all 0.4s;
   outline: none;
@@ -429,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #mobile-nav-toggle i {
   color: #fefefe;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 /* Mobile Nav Styling */
@@ -437,12 +433,12 @@ h1, h2, h3, h4, h5, h6 {
 #mobile-nav {
   position: fixed;
   top: 0;
-  padding-top: 18px;
+  padding-top: 1.125rem;
   bottom: 0;
   z-index: 998;
   background-color: #1b1b1b;
-  left: -260px;
-  width: 260px;
+  left: -16.25rem;
+  width: 16.25rem;
   overflow-y: auto;
   transition: 0.4s;
 }
@@ -459,9 +455,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #mobile-nav ul li a {
   color: #fefefe;
-  font-size: 17px;
+  font-size: 1.0625rem;
   overflow: hidden;
-  padding: 10px 22px 10px 15px;
+  padding: 0.625rem 1.375rem 0.625rem 0.9375rem;
   position: relative;
   text-decoration: none;
   width: 100%;
@@ -474,14 +470,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul li li {
-  padding-left: 30px;
+  padding-left: 1.875rem;
 }
 
 #mobile-nav ul .menu-has-children i {
   position: absolute;
   right: 0;
   z-index: 99;
-  padding: 15px;
+  padding: 0.9375rem;
   cursor: pointer;
   color: #fefefe;
 }
@@ -543,7 +539,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; 
-  margin-top: 90px; 
+  margin-top: 5.625rem; 
 }
 
 #bg_video {
@@ -572,13 +568,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   flex-direction: column;
   text-align: center;
   z-index: 99 ;
-  margin: 0 0 0 100px;
+  margin: 0 0 0 6.25rem;
 }
 
 #intro h1 {
   color: #fefefe;
   font-family: raleway, sans-serif;
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -596,24 +592,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro p > a {
   color: #fefefe;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 #intro .about-btn{
   font-family: raleway, sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  border-radius: 3.125rem;
   transition: 0.5s;
   line-height: 1;
-  margin: 10px;
+  margin: 0.625rem;
   color: #fefefe;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #40bf73;
+  border: 0.125rem solid #40bf73;
   text-decoration: none;
 }
 
@@ -631,23 +627,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 .timer {
   text-align: center;
   background: rgba(2, 13, 7, 0.8);
-  padding: 15px;
-  border-radius: 15px;
-  max-width: 400px;
+  padding: 0.9375rem;
+  border-radius: 0.9375rem;
+  max-width: 25rem;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.5);
 }
 
 .heading {
   font-weight: bold;
   font-size: 1.25rem;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   color: #fefefe;
 }
 
@@ -664,9 +660,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 1.25rem;
   font-weight: bold;
   padding: 0.8rem 0.8rem;
-  border-radius: 10px;
-  box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.4);
-  min-width: 60px;
+  border-radius: 0.625rem;
+  box-shadow: inset 0rem -0.3125rem 0.625rem rgba(0, 0, 0, 0.4);
+  min-width: 3.75rem;
   text-align: center;
 }
 
@@ -679,7 +675,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .description {
   font-size: 0.9rem;
   color: #fefefe;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 
 .live-message {
@@ -703,7 +699,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 576px) {
 
   .timer-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 
   .heading {
@@ -736,10 +732,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
   position: relative;
   height: 50vh;
-  padding: 20px auto;
+  padding: 3.75rem 0 2.5rem 0;
   color: #fefefe;
-  padding: 60px 0 40px 0;
-
 }
 
 #about:before {
@@ -754,39 +748,39 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: #40bf73;
   text-align: center;
   font-family: neon-ai, sans-serif;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
 }
 
 #about h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: #fefefe;
   text-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 #about h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin: 10px auto 10px auto;
+  margin: 0.625rem auto;
   color: #fefefe;
   text-wrap: nowrap;
   text-decoration: underline;
 }
 
 #about p {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: justify;
   color: #fefefe;
 }
@@ -796,15 +790,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #events {
-  padding: 60px 0 30px 0;
+  padding: 3.75rem 0 1.875rem 0;
   background: rgba(2, 13, 7, 0.8);
-  /*  */
 }
 
 #events .event {
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 #events .event .details {
@@ -815,36 +808,36 @@ body.mobile-nav-active #mobile-nav-toggle {
   bottom: -70%;
   right: 0;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #events .event .details h3 {
   color: #fefefe;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 #events .event .details h3:hover a{
   color: #40bf73;
   background-color: transparent;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   text-decoration: none ;
 }
 
 #events .event .details p {
   color: #fefefe;
-  font-size: 15px;
-  margin-bottom: 10px;
+  font-size: 0.9375rem;
+  margin-bottom: 0.625rem;
   font-style: italic;
 }
 
 #events .event .details a {
   color: #fefefe;
-  margin: 30px auto;
+  margin: 1.875rem auto;
 }
 
 #events .event .details a:hover {
@@ -861,31 +854,31 @@ body.mobile-nav-active #mobile-nav-toggle {
 -------------------------------------------------------------- */
 
 #events-details {
-  padding: 40px 0;
+  padding: 2.5rem 0;
   width: 100vw;
 }
 
 #events-details .details h2 {
   color: #fefefe;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .primary-btn{
   font-family: raleway, sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  border-radius: 3.125rem;
   transition: 0.5s;
   line-height: 1;
   color: #fefefe;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #40bf73;
+  border: 0.125rem solid #40bf73;
   text-decoration: none;
   text-align: center;
 }
@@ -901,41 +894,39 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #guidelines .item {
-  font-size: 16px;
+  font-size: 1rem;
   word-wrap: break-word;
   color: #fefefe;
-  margin: 5px auto;
+  margin: 0.3125rem auto;
 }
-
 
 /*--------------------------------------------------------------
 # Sponsors Section
 --------------------------------------------------------------*/
 
 #sponsors {
-  padding: 30px 0;
+  padding: 1.875rem 0;
   background-color: #fefefe;
-  
 }
 
 #sponsors .sponsors-wrap {
-  border-right: 1px solid #e0e5fa;
-  border-left: 1px solid #e0e5fa;
+  border-right: 0.0625rem solid #e0e5fa;
+  border-left: 0.0625rem solid #e0e5fa;
 }
 
 #sponsors .sponsor-header{
   background-color: lightgrey;
   width: 100%;
-  height: 30px;
-  padding: 5px auto;
+  height: 1.875rem;
+  padding: 0.3125rem auto;
   color: #1b1b1b;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 #sponsors .sponsor-logo {
-  padding: 30px;
+  padding: 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -945,11 +936,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
+  border-right: 0.0625rem solid #e0e5fa;
+  border-bottom: 0.0625rem solid #e0e5fa;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
-  height: 160px;
+  height: 10rem;
 }
 
 #sponsors .sponsor-logo:hover img {
@@ -961,14 +952,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.4s ease-in-out;
 }
 
-
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
 
 #schedule {
-  padding: 60px 0 60px 0;
-  
+  padding: 3.75rem 0 3.75rem 0;
 }
 
 #schedule .nav-tabs {
@@ -976,7 +965,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: auto;
   display: block;
   border-bottom: 0;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 #schedule .nav-tabs li {
@@ -986,11 +975,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule .nav-tabs a {
   border: none;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   font-weight: 600;
   background-color: #272737;
   color: #fefefe;
-  padding: 10px 100px;
+  padding: 0.625rem 6.25rem;
 }
 
 #schedule .nav-tabs a.active {
@@ -1000,9 +989,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #schedule .sub-heading {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: italic;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 1.875rem auto;
   color: #1b1b1b;
 }
 
@@ -1011,9 +1000,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #schedule .schedule-item {
-  border-bottom: 1px solid #cad4f6;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border-bottom: 0.0625rem solid #cad4f6;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
   transition: background-color ease-in-out 0.3s;
 }
 
@@ -1022,17 +1011,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #schedule .schedule-item time {
-  padding-bottom: 5px;
+  padding-bottom: 0.3125rem;
   display: inline-block;
 }
 
 #schedule .schedule-item .event {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   overflow: hidden;
   border-radius: 50%;
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 0 0.625rem 0.625rem 0;
 }
 
 #schedule .schedule-item .event img {
@@ -1044,9 +1033,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #schedule .schedule-item h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   color : #1b1b1b;
 }
 
@@ -1054,7 +1043,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-style: italic;
   color: #1b1b1b;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #schedule .schedule-item p {
@@ -1068,19 +1057,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #venue {
-  padding: 60px 0;
+  padding: 3.75rem 0;
   background: rgba(2, 13, 7, 0.8);
-  
 }
 
 #venue .container-fluid {
-  margin-bottom: 3px;
+  margin-bottom: 0.1875rem;
 }
 
 #venue .venue-map iframe {
   width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 18.75rem;
 }
 
 #venue .venue-info {
@@ -1088,8 +1076,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-position: center;
   background-size: cover;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 
 #venue .venue-info:before {
@@ -1104,7 +1092,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #venue .venue-info h4 {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #fefefe;
   text-align: center;
@@ -1112,7 +1100,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #venue .venue-info p {
   color: #fefefe;
-  margin: 5px auto;
+  margin: 0.3125rem auto;
   text-align: justify;
 }
 
@@ -1121,28 +1109,27 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #gallery {
-  padding: 60px;
+  padding: 3.75rem;
   overflow: hidden;
   background: rgba(2, 13, 7, 0.8);
-  
 }
 
 #gallery .owl-nav,
 #gallery .owl-dots {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   text-align: center;
 }
 
 #gallery .owl-item {
-  border-left: 2px solid #fefefe;
-  border-right: 2px solid #fefefe;
+  border-left: 0.125rem solid #fefefe;
+  border-right: 0.125rem solid #fefefe;
 }
 
 #gallery .owl-dot {
   display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
+  margin: 0 0.3125rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: #fefefe;
 }
@@ -1156,10 +1143,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gallery .gallery-carousel .center {
-  border: 6px solid #40bf73;
-  margin: -10px;
+  border: 0.375rem solid #40bf73;
+  margin: -0.625rem;
   box-sizing: content-box;
-  padding: 4px;
+  padding: 0.25rem;
   background: #fefefe;
   z-index: 1;
 }
@@ -1169,9 +1156,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 
 #faq {
-  padding: 60px 0;
+  padding: 3.75rem 0;
   background: rgba(2, 13, 7, 0.8);
-  
 }
 
 #faq #faq-list {
@@ -1180,29 +1166,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #faq #faq-list li {
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 0.0625rem solid #fefefe;
 }
 
 #faq #faq-list a {
-  padding: 18px 0;
+  padding: 1.125rem 0;
   display: block;
   position: relative;
   font-family: raleway, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 600;
-  padding-right: 20px;
+  padding-right: 1.25rem;
 }
 
 #faq #faq-list i {
-  font-size: 24px;
+  font-size: 1.5rem;
   position: absolute;
   right: 0;
-  top: 16px;
+  top: 1rem;
 }
 
 #faq #faq-list p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 #faq #faq-list a.collapse {
@@ -1217,26 +1203,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   content: "\f055" !important;
 }
 
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 
 #contact {
-  padding: 60px 0;
+  padding: 3.75rem 0;
   background: rgba(2, 13, 7, 0.8);
-  
 }
 
 #contact .contact-info {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 
 #contact .contact-info i {
-  font-size: 48px;
+  font-size: 3rem;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: #40bf73;
 }
 
@@ -1246,8 +1230,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-info h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 1.125rem;
+  margin-bottom: 0.9375rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #40bf73;
@@ -1264,9 +1248,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .contact-address,
 #contact .contact-phone,
 #contact .contact-email {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
-
 
 /*--------------------------------------------------------------
 # Footer
@@ -1274,9 +1257,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   background: #1f1f1f;
-  padding: 0 0 25px 0;
+  padding: 0 0 2.5rem 0;
   color: #eee;
-  font-size: 14px;
+  font-size: 0.875rem;
   z-index: 9999;
 }
 
@@ -1285,34 +1268,34 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-info {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 #footer .footer-top .footer-info img {
-  width: 150px;
-  height: 150px;
+  width: 9.375rem;
+  height: 9.375rem;
   margin: 0 auto;
 }
 
 #footer .footer-top h4 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   color: #fefefe;
   text-transform: uppercase;
   position: relative;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #40bf73;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.125rem solid #40bf73;
 }
 
 #footer .footer-top .footer-info p {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: justify;
   font-family: raleway, sans-serif;
   color: #fefefe;
 }
 
 #footer .footer-top .footer-links {
-  margin: 30px 0;  
+  margin: 1.875rem 0;
 }
 
 #footer .footer-top .footer-links ul {
@@ -1322,14 +1305,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul i {
-  padding-right: 5px;
+  padding-right: 0.3125rem;
   color: #40bf73;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 #footer .footer-top .footer-links ul li {
-  border-bottom: 1px solid #333333;
-  padding: 10px 0;
+  border-bottom: 0.0625rem solid #333333;
+  padding: 0.625rem 0;
 }
 
 #footer .footer-top .footer-links ul li:first-child {
@@ -1344,24 +1327,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #40bf73;
 }
 
-
 #footer .footer-top .social-links {
-  margin: 30px;
+  margin: 1.875rem;
   width: 100%;
 }
 
 #footer .footer-top .social-links a {
-  font-size: 18px;
+  font-size: 1.125rem;
   display: inline-block;
   background: #111111;
   color: #eee;
   line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
+  padding: 0.5rem 0;
+  margin-right: 0.25rem;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   transition: 0.3s;
 }
 
@@ -1372,12 +1354,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 1.875rem;
 }
 
 #footer .credits {
   text-align: center;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #fefefe;
 }
 
@@ -1388,19 +1370,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: none;
   background: #40bf73;
   color: #fefefe;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   text-align: center;
-  border-radius: 50px;
-  right: 15px;
-  bottom: 15px;
+  border-radius: 50%;
+  right: 1rem;
+  bottom: 1rem;
   transition: background 0.1s ease-in-out;
   z-index: 99999;
 }
 
 .back-to-top i {
-  font-size: 24px;
-  padding-top: 6px;
+  font-size: 1.5rem;
+  padding-top: 0.375rem;
 }
 
 .back-to-top:focus {
@@ -1422,12 +1404,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
-    padding: 20px 0;
+    padding: 1.25rem 0;
   }
 
   #contact .contact-phone {
-    border-left: 1px solid #fefefe;
-    border-right: 1px solid #fefefe;
+    border-left: 0.0625rem solid #fefefe;
+    border-right: 0.0625rem solid #fefefe;
   }
 }
 
@@ -1445,7 +1427,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   #about {
     background-attachment: fixed;
   }
-
 }
 
 @media (max-width: 1199px) {
@@ -1454,7 +1435,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   .nav-menu a {
-    padding: 8px 4px;
+    padding: 0.5rem 0.25rem;
   }
 }
 
@@ -1466,8 +1447,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #header {
     background-color: #1b1b1b;
-    height: 70px;
-    padding: 15px 0;
+    height: 4.375rem;
+    padding: 0.9375rem 0;
     transition: all 0.5s;
   }
 
@@ -1481,7 +1462,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #intro .intro-wrapper {
     flex-direction: column;
-    gap: 50px;
+    gap: 3.125rem;
   }
 
   #intro .logo-container img {
@@ -1495,15 +1476,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #intro h1 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
 
   #intro p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .timer-wrapper {
-    /* width: 100vw; */
     flex: 0 1 auto;
   }
 
@@ -1512,7 +1492,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
   }
 
-  
   #events .event .details {
     bottom: -60%;
   }
@@ -1522,13 +1501,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #schedule .nav-tabs a {
-    padding: 8px 60px;
+    padding: 0.5rem 3.75rem;
   }
 
   #footer .footer-top .social-links {
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
-
 }
 
 #faq #faq-list p {
@@ -1537,33 +1515,33 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 15px;
-    right: 20px;
+    bottom: 1rem;
+    right: 1.25rem;
   }
 
   #faq #faq-list a {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   #faq #faq-list i {
-    top: 13px;
+    top: 0.8125rem;
   }
 }
 
 @media (max-width: 767px) {
   #schedule .nav-tabs a {
-    padding: 8px 50px;
+    padding: 0.5rem 3.125rem;
   }
 }
 
 @media (max-width: 574px) {
   #venue .venue-info h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   #schedule .nav-tabs a {
-    padding: 8px 30px;
+    padding: 0.5rem 1.875rem;
   }
 }
