@@ -1461,18 +1461,23 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: inline;
   }
 
-  /* #intro {
-  } */
-
   #intro .intro-wrapper {
     flex-direction: column;
     gap: 3.125rem;
     /* margin-bottom: 20rem; */
   }
 
+  #intro .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #intro .logo-container img {
     margin: 0;
     padding: 0;
+    width: 75%;
+    height: 75%;
     z-index: 99;
   }
 
