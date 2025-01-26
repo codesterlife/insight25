@@ -700,10 +700,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 576px) {
 
-  .timer-wrapper {
-    /* margin-bottom: 1.875rem; */
-  }
-
   .heading {
       font-size: 1rem;
   }
@@ -729,7 +725,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about {
   background: url("../img/about-bg.png");
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
   overflow: hidden;
   position: relative;
@@ -1495,11 +1491,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #intro .intro-wrapper .timer-wrapper {
-    flex: 0 1 auto;
-    /* margin-top: 50rem; */
+    flex: 0 1 auto
   }
 
   #about {
+    padding: 0;
     margin-top: 20rem;
   }
 
