@@ -1599,6 +1599,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 400px) {
   #about {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 390px) {
+
+  #about {
     margin-top: 3rem;
   }
 }
